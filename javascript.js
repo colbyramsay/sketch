@@ -10,13 +10,14 @@ btn1.addEventListener("click", function() {
 
 function getGridNumber() {
     gridNumber = prompt("How many squares would you like?");
-    location.reload();
-    return gridNumber;
+    while (gridContainer.hasChildNodes()) {
+        gridContainer.removeChild(gridContainer.firstChild);
+      }
+    createGrid (gridNumber);
 }
 
 createGrid (gridNumber);
 function createGrid(gridNumber) {
-    alert ("gridNumber is " + gridNumber);
     for (i = 0; i < (gridNumber ** 2); i++ ) {
         const content = document.createElement('div');
         content.classList.add('content');
