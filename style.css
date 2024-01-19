@@ -15,6 +15,41 @@ body {
     color: black;
 }
 
+.buttons {
+    margin: 0px 0px 27px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    border: none;
+    border-radius: 18px;
+    color: white;
+    padding: 0px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-style: Times, serif;
+    margin: 0px 9px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    height: 36px;
+    width: 126px;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 1px solid red;
+}
+
+.button1:hover {
+    background-color: red;
+    color: white;
+}
+
 .grid-container {
     margin: 0px;
     padding: 0px;
@@ -31,9 +66,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     padding: 0px;
-    margin: 0px;
+    margin: 1px;
     background-color: blue;
 }
+
+.square:hover { 
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+

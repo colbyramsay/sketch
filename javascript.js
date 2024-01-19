@@ -1,9 +1,30 @@
+let gridNumber = 16;
+
 const gridContainer = document.querySelector('#gridContainer');
 
-for (i = 0; i < 256; i++ ) {
-    const content = document.createElement('div');
-    content.classList.add('content');
-    content.classList.add('square');
-    content.textContent = ("A!");
-    gridContainer.appendChild(content);
+const btn1 = document.querySelector('#btn1');
+
+btn1.addEventListener("click", function() {
+    getGridNumber();
+});
+
+function getGridNumber() {
+    gridNumber = prompt("How many squares would you like?");
+    location.reload();
+    return gridNumber;
+}
+
+createGrid (gridNumber);
+function createGrid(gridNumber) {
+    alert ("gridNumber is " + gridNumber);
+    for (i = 0; i < (gridNumber ** 2); i++ ) {
+        const content = document.createElement('div');
+        content.classList.add('content');
+        content.classList.add('square');
+        content.textContent = ("A!");
+        gridContainer.appendChild(content);
+        content.addEventListener('mouseover', function() {
+            content.classList.add('yellow');
+        });
+    }
 }
